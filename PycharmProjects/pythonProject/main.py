@@ -12,6 +12,7 @@ class Game:
         else:
             self.P2Score()
 
+
     def score(self):
         result = ""
         if (self.p1points == self.p2points and self.p1points < 3):
@@ -27,6 +28,9 @@ class Game:
 
         P1res = ""
         P2res = ""
+
+
+        #------------------ #testa pontuação-----------------#
         if (self.p1points > 0 and self.p2points == 0):
             if (self.p1points == 1):
                 P1res = "Fifteen"
@@ -68,18 +72,27 @@ class Game:
             if (self.p1points == 2):
                 P1res = "Thirty"
             result = P1res + "-" + P2res
+        #--------------------fim testa pontuaçao----------------------------#
 
+        # --------------------testa set----------------------#
         if (self.p1points > self.p2points and self.p2points >= 3):
             result = "Advantage " + self.player1Name
 
         if (self.p2points > self.p1points and self.p1points >= 3):
             result = "Advantage " + self.player2Name
+        # --------------------fim testa set----------------------#
 
+        # --------------------verifica  quem vence----------------------#
         if (self.p1points >= 4 and self.p2points >= 0 and (self.p1points - self.p2points) >= 2):
             result = "Win for " + self.player1Name
         if (self.p2points >= 4 and self.p1points >= 0 and (self.p2points - self.p1points) >= 2):
             result = "Win for " + self.player2Name
         return result
+
+    # ---------------------fim verifica quem vence-------------------#
+
+
+
 
     def SetP1Score(self, number):
         for i in range(number):
