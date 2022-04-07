@@ -1,0 +1,9 @@
+#foi dividido em classes para que cada uma tenha sua responsabilidade.
+# foi usado o padrao REPLACE MAGIC LITERAL
+# para trazer um significado para os numeros aleatorios encontrado
+# no codigo, troquei o numero em si por uma constante para facilitar a leitura do codigo.
+
+# foi usado o padrao Decompose Conditional
+# foi reduzido as quantidades de ifs e
+# criado varios pequenos metodos.
+
